@@ -23,6 +23,7 @@ export class UserHome extends React.Component {
 
   render() {
     const {passwordReset, userInfo} = this.props
+    console.log(this.props)
 
     let orders = this.props.filter
       ? this.props.orders.filter(order => {

@@ -14,7 +14,7 @@ class Navbar extends React.Component {
   componentDidMount() {
     this.props.loadCart()
   }
-  
+
   handleClick() {
     this.props.loadProducts(1)
     // this.props.history.push(`/products?page=1`)
@@ -24,7 +24,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-          <h1 className="navbar-brand">Mangonificent™ 🥭</h1>
+          <h1 className="navbar-brand"> Mangonificent™ </h1>
           <div className="navbar-nav">
             {this.props.isLoggedIn ? (
               <React.Fragment>

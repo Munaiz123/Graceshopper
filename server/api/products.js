@@ -4,8 +4,8 @@ const {isAdmin} = require('./middleware')
 module.exports = router
 
 const paginate = page => {
-  const offset = (page - 1) * 20
-  const limit = 21
+  const offset = (page - 1) * 20 //aka skip
+  const limit = 20
 
   return {
     offset,

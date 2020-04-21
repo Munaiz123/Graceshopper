@@ -20,6 +20,7 @@ export class Products extends React.Component {
     this.handleNextClick = this.handleNextClick.bind(this)
     this.handlePrevClick = this.handlePrevClick.bind(this)
   }
+
   componentDidMount() {
     const values = queryString.parse(this.props.location.search)
     this.setState({ page: Number(values.page) })
@@ -37,6 +38,7 @@ export class Products extends React.Component {
       search: event.target.value
     })
   }
+
   async handleNextClick() {
     await this.props.loadProducts(this.state.page + 1)
     this.props.history.push(`/products?page=${this.state.page + 1}`)
@@ -44,6 +46,7 @@ export class Products extends React.Component {
       page: this.state.page + 1
     })
   }
+
   async handlePrevClick() {
     await this.props.loadProducts(this.state.page - 1)
     this.props.history.push(`/products?page=${this.state.page - 1}`)

@@ -2,6 +2,8 @@ const router = require('express').Router()
 const {Order, Product, User, ProductOrder} = require('../db/models')
 const {isLoggedIn, isAdmin} = require('./middleware')
 const {orderStatusChangeEmail} = require('../../utils/gmail')
+
+
 //GET all orders for a singleUser
 router.get(`/singleUser`, isLoggedIn, async (req, res, next) => {
   try {
